@@ -13,7 +13,9 @@ edit .gitcredentials
 
 Install oh-my-posh
 ```ps1
-Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease```
+Install-Module oh-my-posh -Scope CurrentUser -AllowPrerelease
+```
+
 ```ps1
 Get-PoshThemes
 ```
