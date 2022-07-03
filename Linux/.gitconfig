@@ -1,3 +1,7 @@
+[user]
+	email = kevinz_c@live.com
+	name = Kevin Cornish
+
 [alias]
     a = add --all
     c = commit
@@ -10,12 +14,25 @@
     pf = push -f
     copy-diff = !git diff | xclip -selection c
     paste-diff = !xclip -selection c -o | git apply -3
-
+    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    lg = !"git lg1"
 [color]
-    diff = auto
     status = auto
     branch = auto
 	ui = true
+[color "diff"]
+        meta = "yellow bold"
+        commit = "green bold"
+        frag = "magenta bold"
+        old = "red bold"
+        new = "green bold"
+        whitespace = "red reverse"
+[color "diff-highlight"]
+        oldNormal = "red bold"
+        oldHighlight = "red bold 52"
+        newNormal = "green bold"
+        newHighlight = "green bold 22"
 [push]
     default = simple
 [merge]
@@ -27,5 +44,3 @@
 	fontdiff = -family Hack -size 11 -weight normal -slant roman -underline 0 -overstrike 0
 [core]
 	editor = nano
-[include]
-    path = ~/.gitcredentials
